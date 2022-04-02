@@ -9,3 +9,4 @@ These are made for double-click execution via file explorer.
 * `Fix printer not install- and selectable.bat` fixes a problem where no printer can be selected or even installed, caused by corrupted files.
 * `Fix search & settings.bat` fixes the windows search and the settings app not starting up correctly and freezing.
 * `Fix winmail.dat - Disable RTF & TNEF.reg` fixes the receiver of an email getting a `winmail.dat` file as attachment instead of a normal file by introducing a registry fix to keep Outlook from ever sending emails in RTF format or TNEF encryption.
+* `Remove Java.bat` removes remains of a Java installation after uninstall.
