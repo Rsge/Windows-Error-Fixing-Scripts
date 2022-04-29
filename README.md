@@ -10,3 +10,4 @@ These are made for double-click execution via file explorer.
 * `Fix search & settings.bat` fixes the windows search and the settings app not starting up correctly and freezing.
 * `Fix winmail.dat - Disable RTF & TNEF.reg` fixes the receiver of an email getting a `winmail.dat` file as attachment instead of a normal file by introducing a registry fix to keep Outlook from ever sending emails in RTF format or TNEF encryption.
 * `Remove Java.bat` removes remains of a Java installation after uninstall.
+* `Windows activation helper.bat` shows you the product key of your current Windows installation to potentially resolve activation issues.
