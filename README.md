@@ -7,7 +7,9 @@ These are made for double-click execution via file explorer.
 * `Fix edgegdi.dll.bat` fixes the `edgegdi.dll` not being available for certain tasks, leading to errors thrown.
 * `Fix long login times.bat` deletes `WebCache`and `WebCacheLock.dat` on all normal users to fix unbearable login times after installing windows through a custom made image.
 * `Fix printer not install- and selectable.bat` fixes a problem where no printer can be selected or even installed, caused by corrupted files.
+* `Fix prompt for password change.bat` disables the prompting for a password change when using a Microsoft account.
 * `Fix search & settings.bat` fixes the windows search and the settings app not starting up correctly and freezing.
 * `Fix winmail.dat - Disable RTF & TNEF.reg` fixes the receiver of an email getting a `winmail.dat` file as attachment instead of a normal file by introducing a registry fix to keep Outlook from ever sending emails in RTF format or TNEF encryption.
+* `Fix work file not createable.bat` fixes the "Could not create the work file" error in Office.
 * `Remove Java.bat` removes remains of a Java installation after uninstall.
 * `Windows activation helper.bat` shows you the product key of your current Windows installation to potentially resolve activation issues.
