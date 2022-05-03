@@ -18,3 +18,4 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Fold
 echo.
 echo Done. Please log off & on and try if the problem was resolved.
 pause
+exit
