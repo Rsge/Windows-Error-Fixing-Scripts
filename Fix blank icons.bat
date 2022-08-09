@@ -35,4 +35,4 @@ IF ERRORLEVEL 1 goto yes
 shutdown /r /f /t 00
 
 :no
-exit /B
+exit
