@@ -42,9 +42,9 @@ echo Creating needed folders. . .
 mkdir "%USERPROfile%\AppData\Local\Microsoft\Windows\INetCache\Content.Word"
 mkdir "%USERPROfile%\AppData\Local\Microsoft\Windows\INetCacheContent.Word"
 echo.
-echo Defining new registry entries for chache path. . .
+echo Defining new registry entries for cache path. . .
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" /v "Cache" /t REG_SZ /d "%userprofile%\AppData\Local\Microsoft\Windows\INetCache" /f
 echo.
-echo Done. Please log off ^& on and try if the problem was resolved.
+echo Done. Please log off ^& on and see if the problem was resolved.
 pause
 exit
