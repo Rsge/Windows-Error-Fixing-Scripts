@@ -2,9 +2,12 @@
 A collection of scripts to fix various errors and inconveniences cropping up in Windows.\
 These are made for running via double-clicking the scripts in file explorer.
 
+* `Disable 3D Objects folder.reg` disables the 3D Objects folder in Quicklinks, This PC and in the navigation menu.
 * `Disable AeroShake.reg` disables Windows AeroShake function for all users, which if you "shake" a window you are "holding", minimizes all other windows.
 * `Disable Cortana & start menu Bing search.reg` disables the use of Cortana and the start menu searching on the internet via Bing for all users.
+* `Disable Network folder.reg` disables the Network folder.
 * `Disable News & Meet.reg` disables the "Meet now" button for all users and hides the News & Interests feed for the current one.
+* `Disable OneDrive folder.reg` disables the OneDrive folder in Quicklinks, This PC and in the navigation menu.
 * `Fix Outlook Temp folder.cmd` empties the Temp folder of MS Office Outlook to fix it filling up the main harddrive.
 * `Fix blank icons.cmd` fixes desktop icons appearing as blank white rectangles instead of their usual icon. Adapted from the [ElevenForums](https://www.elevenforum.com/t/rebuild-icon-cache-in-windows-11.2049/) [[Archived link](https://web.archive.org/web/20211017173532/https://www.elevenforum.com/t/rebuild-icon-cache-in-windows-11.2049/)]
 * `Fix edgegdi.dll.cmd` fixes the `edgegdi.dll` not being available for certain tasks, leading to errors thrown.
