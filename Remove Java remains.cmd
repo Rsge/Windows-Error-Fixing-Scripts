@@ -30,7 +30,7 @@ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul & shift /1)
 REM Functional part
 rd /s /q "C:\Program Files (x86)\Common Files\Java\"
 rd /s /q "C:\Program Files\Common Files\Java\"
-reg query hklm\software\classes\installer\products /f "java(tm) 7" /s | find "HKEY_LOCAL_MACHINE" > deljava.txt
+reg query hklm\software\classes\installer\products /f "java(tm) 8" /s | find "HKEY_LOCAL_MACHINE" > deljava.txt
 for /f "tokens=* delims= " %%a in (deljava.txt) do reg delete %%a /f
 del deljava.txt
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Java Runtime Environment" /f
