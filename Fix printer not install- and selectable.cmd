@@ -29,10 +29,10 @@ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul & shift /1)
 
 REM Functional part
 net stop spooler
-pushd "%~dp0\ScriptFiles\PrinterNotInstallable" && (
-reg import "Printer Spooler Registry.reg"
-robocopy spool C:\Windows\System32\spool *
-popd
+    pushd "%~dp0\ScriptFiles\PrinterNotInstallable" && (
+    reg import "Printer Spooler Registry.reg"
+    robocopy spool C:\Windows\System32\spool *
+    popd
 )
 net start spooler
 echo Done.
