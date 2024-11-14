@@ -8,28 +8,28 @@ echo Please SAVE ALL OPEN WORK before continuing.
 echo.
 pause
 echo.
-If exist "%iconcache%" goto delete
+if exist "%iconcache%" goto delete
 echo The %localappdata%\IconCache.db file has already been deleted.
 echo.
-If exist "%iconcache_x%" goto delete
+if exist "%iconcache_x%" goto delete
 echo The %localappdata%\Microsoft\Windows\Explorer\IconCache_*.db files have already been deleted.
 echo.
-exit /B
+exit /b
 
 :delete
 echo Attempting to delete IconCache.db files...
 echo.
 ie4uinit.exe -show
-taskkill /IM explorer.exe /F
-If exist del /A /F /Q "%iconcache%"
-If exist del /A /F /Q "%iconcache_x%"
+taskkill /f /im explorer.exe
+If exist del /a /f /q "%iconcache%"
+If exist del /a /f /q "%iconcache_x%"
 start explorer.exe
 echo IconCache database files have been successfully deleted.
 echo.
 echo You will need to restart the PC to finish rebuilding your icon cache.
-CHOICE /C:YN /M "Do you want to restart the PC now?"
-IF ERRORLEVEL 2 goto no
-IF ERRORLEVEL 1 goto yes
+choice /c:yn /m "Do you want to restart the PC now?"
+if errorlevel 2 goto no
+if errorlevel 1 goto yes
 
 :yes
 shutdown /r /f /t 00

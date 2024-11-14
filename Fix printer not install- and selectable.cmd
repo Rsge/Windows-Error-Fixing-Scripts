@@ -1,18 +1,18 @@
 @echo off
-REM Ensure Admin rights
-setlocal DisableDelayedExpansion
+rem Ensure Admin rights
+setlocal disabledelayedexpansion
 set "batchPath=%~0"
 for %%k in (%0) do set batchName=%%~nk
 set "vbsGetPrivileges=%temp%\OEgetPriv_%batchName%.vbs"
-setlocal EnableDelayedExpansion
+setlocal enabledelayedexpansion
 net file 1>nul 2>nul
 if '%errorlevel%' == '0' (goto gotPrivileges) else (goto getPrivileges)
 
 :getPrivileges
 if '%1'=='ELEV' (echo ELEV & shift /1 & goto gotPrivileges)
-REM If you have non-ASCII chars in your path you'll need to set the codepage appropriate to your locale:
-REM chcp 1252
-REM (ANSI-Latin1 - Western European, e.g. German)
+rem If you have non-ASCII chars in your path you'll need to set the codepage appropriate to your locale:
+rem chcp 1252
+rem (ANSI-Latin1 - Western European, e.g. German)
 cls
 echo Set UAC = CreateObject^("Shell.Application"^) > "%vbsGetPrivileges%"
 echo args = "ELEV " >> "%vbsGetPrivileges%"
@@ -27,12 +27,12 @@ exit
 if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul & shift /1)
 
 
-REM Functional part
+rem Functional part
 net stop spooler
-    pushd "%~dp0\ScriptFiles\PrinterNotInstallable" && (
-    reg import "Printer Spooler Registry.reg"
-    robocopy spool C:\Windows\System32\spool *
-    popd
+pushd "%~dp0\ScriptFiles\PrinterNotInstallable" && (
+	reg import "Printer Spooler Registry.reg"
+	robocopy spool C:\Windows\System32\spool *
+	popd
 )
 net start spooler
 echo Done.
