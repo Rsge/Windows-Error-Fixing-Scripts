@@ -28,6 +28,14 @@ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul & shift /1)
 
 
 rem Functional part
-wmic UserAccount set PasswordExpires=False
+for /f "delims=" %%i in ('powershell -command "(Get-WmiObject Win32_OperatingSystem).Caption -Match \"Windows 11\""') do (
+	set isWin11=%%i
+)
+if %isWin11%==True (
+	powershell -command "Get-LocalUser | Set-LocalUser -PasswordNeverExpires $true"
+	echo Done.
+) else (
+	wmic UserAccount set PasswordExpires=False
+)
 pause
 exit
