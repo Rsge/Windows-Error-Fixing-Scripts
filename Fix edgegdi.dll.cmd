@@ -40,4 +40,4 @@ del "%localappdata%\Temp\edgegdi.dll"
 
 echo Done.
 pause
-exit
+exit /b

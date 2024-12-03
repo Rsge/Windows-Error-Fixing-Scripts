@@ -38,4 +38,4 @@ if %isWin11%==True (
 	wmic UserAccount set PasswordExpires=False
 )
 pause
-exit
+exit /b

@@ -32,9 +32,9 @@ pushd "C:\Users" && (
 	for /f "tokens=*" %%a in ('dir /a:d /b') do (
 		if not "%%a" == "Public" if not "%%a" == "All Users" if not "%%a" == "Default User" (
 			pushd "C:\Users\%%a\AppData\Local\Microsoft\Windows" && (
-			rd /s /q WebCache
-			del /q /f WebCacheLock.dat
-			popd
+				rd /s /q WebCache
+				del /q /f WebCacheLock.dat
+				popd
 			)
 		)
 	)
@@ -42,4 +42,4 @@ pushd "C:\Users" && (
 )
 echo Done.
 pause
-exit
+exit /b

@@ -38,4 +38,4 @@ echo removing registry hack again. . .
 reg delete "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint" /v "RestrictDriverInstallationToAdministrators" /f
 echo Done.
 pause
-exit
+exit /b

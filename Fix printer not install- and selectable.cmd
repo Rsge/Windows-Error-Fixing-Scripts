@@ -37,4 +37,4 @@ pushd "%~dp0\ScriptFiles\PrinterNotInstallable" && (
 net start spooler
 echo Done.
 pause
-exit
+exit /b

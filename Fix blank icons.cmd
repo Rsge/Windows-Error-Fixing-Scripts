@@ -1,22 +1,18 @@
 @echo off
 set iconcache=%localappdata%\IconCache.db
 set iconcache_x=%localappdata%\Microsoft\Windows\Explorer\iconcache*
-
 echo.
-echo The explorer process must be temporarily killed before deleting the IconCache.db file.
+echo The explorer process must be killed temporarily before deleting the IconCache.db file.
 echo Please SAVE ALL OPEN WORK before continuing.
 echo.
 pause
 echo.
-if exist "%iconcache%" goto delete
-echo The %localappdata%\IconCache.db file has already been deleted.
-echo.
-if exist "%iconcache_x%" goto delete
-echo The %localappdata%\Microsoft\Windows\Explorer\IconCache_*.db files have already been deleted.
-echo.
-exit /b
+if not exist "%iconcache%" if not exist "%iconcache_x%" (
+	echo The IconCache files have already been deleted.
+	pause
+	exit /b
+)
 
-:delete
 echo Attempting to delete IconCache.db files...
 echo.
 ie4uinit.exe -show
@@ -27,12 +23,9 @@ start explorer.exe
 echo IconCache database files have been successfully deleted.
 echo.
 echo You will need to restart the PC to finish rebuilding your icon cache.
-choice /c:yn /m "Do you want to restart the PC now?"
-if errorlevel 2 goto no
-if errorlevel 1 goto yes
-
-:yes
-shutdown /r /f /t 00
-
-:no
-exit
+choice /m "Do you want to restart the PC now?"
+rem Yes
+if not errorlevel 2 (
+	shutdown /r /f /t 0
+)
+exit /b
