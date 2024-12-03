@@ -2,6 +2,7 @@
 A collection of scripts to fix various errors and inconveniences cropping up in Windows.\
 These are made for running via double-clicking the scripts in file explorer.
 
+* `Delete Outlook profile.cmd` deletes all traces of a specified Outlook mail profile, so that a new profile of the same name can be created afterwards.
 * `Disable 3D Objects folder.reg` disables the 3D Objects folder in Quicklinks, This PC and in the navigation menu.
 * `Disable AeroShake.reg` disables Windows AeroShake function for all users, which if you "shake" a window you are "holding", minimizes all other windows.
 * `Disable Cortana & start menu Bing search.reg` disables the use of Cortana and the start menu searching on the internet via Bing for all users.
