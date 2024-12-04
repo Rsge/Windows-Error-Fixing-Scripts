@@ -21,7 +21,7 @@ echo args = args ^& strArg ^& " " >> "%vbsGetPrivileges%"
 echo Next >> "%vbsGetPrivileges%"
 echo UAC.ShellExecute "!batchPath!", args, "", "runas", 1 >> "%vbsGetPrivileges%"
 "%SystemRoot%\System32\WScript.exe" "%vbsGetPrivileges%" %*
-exit
+exit /b
 
 :gotPrivileges
 if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul & shift /1)
