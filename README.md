@@ -24,4 +24,4 @@ These are made for running via double-clicking the scripts in file explorer.
 * `Remove Java remains.cmd` removes remains of a Java installation after uninstall.
 * `Remove Outlook profile.cmd` deletes all traces of a specified Outlook mail profile, so that a new profile of the same name can be created afterwards.
 * `Set Outlook delegate sent items folder.reg` sets Outlook to put items sent from a delegate into that delegate's sent items folder.
-* `Windows activation helper.cmd` shows you the product key of your current Windows installation to potentially resolve activation issues.
+* `Windows activation helper.cmd` helps to activate Windows by showing the registered product key and, if unsuccessful, provides alternative solutions.
