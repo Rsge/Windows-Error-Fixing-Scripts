@@ -18,8 +18,8 @@ These are made for running via double-clicking the scripts in file explorer.
 * `Fix search and settings.cmd` fixes the windows search and the settings app not starting up correctly and freezing.
 * `Fix winmail.dat - Disable RTF & TNEF.reg` fixes the receiver of an email getting a `winmail.dat` file as attachment instead of a normal file by introducing a registry fix to keep Outlook from ever sending emails in RTF format or TNEF encryption.
 * `Fix work file not createable.cmd` fixes the "Could not create the work file" error in Office.
-* `Open network adapters.cmd` opens the network adapters settings of the "old" Control Panel.
-* `Open printer folder.cmd` opens a folder in Explorer similiar to the Devices abd Printers settings, where printers can be added.
+* `Open network adapters.cmd` opens the network adapters settings of the Control Panel.
+* `Open printer settings.cmd` opens the Devices and Printers settings of the Control Panel.
 * `Open startup folder.cmd` opens the startup folder in Explorer.
 * `Remove Java remains.cmd` removes remains of a Java installation after uninstall.
 * `Remove Outlook profile.cmd` deletes all traces of a specified Outlook mail profile, so that a new profile of the same name can be created afterwards.
