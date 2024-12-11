@@ -9,6 +9,8 @@ These are made for running via double-clicking the scripts in file explorer.
 * `Disable News & Meet.reg` disables the "Meet now" button for all users and hides the News & Interests feed for the current one.
 * `Disable OneDrive folder.reg` disables the OneDrive folder in Quicklinks, This PC and in the navigation menu.
 * `Disable prompt for password change.cmd` disables the prompting for a password change when using a Microsoft account to log into Windows.
+* `Fix #1 Generic (DISM).cmd` runs dism for generic error correction. Always run `Fix #2` after! Otherwise it's useless.
+* `Fix #2 Generic (SFC).cmd` runs sfc for generic error correction (and buys time for actual research ;]). Can be used w/o running `Fix #1` first.
 * `Fix blank icons.cmd` fixes desktop icons appearing as blank white rectangles instead of their usual icon. Adapted from the [ElevenForums](https://www.elevenforum.com/t/rebuild-icon-cache-in-windows-11.2049/) [[Archived link](https://web.archive.org/web/20211017173532/https://www.elevenforum.com/t/rebuild-icon-cache-in-windows-11.2049/)]
 * `Fix edgegdi.dll.cmd` fixes the `edgegdi.dll` not being available for certain tasks, leading to errors thrown.
 * `Fix long login times.cmd` deletes `WebCache`and `WebCacheLock.dat` on all normal users to fix unbearable login times after installing windows through a custom made image.
@@ -18,6 +20,7 @@ These are made for running via double-clicking the scripts in file explorer.
 * `Fix search and settings.cmd` fixes the windows search and the settings app not starting up correctly and freezing.
 * `Fix winmail.dat - Disable RTF & TNEF.reg` fixes the receiver of an email getting a `winmail.dat` file as attachment instead of a normal file by introducing a registry fix to keep Outlook from ever sending emails in RTF format or TNEF encryption.
 * `Fix work file not createable.cmd` fixes the "Could not create the work file" error in Office.
+* `Open device manager.cmd` opens the device manager. (No shit! o.O)
 * `Open network adapters.cmd` opens the network adapters settings of the Control Panel.
 * `Open printer settings.cmd` opens the Devices and Printers settings of the Control Panel.
 * `Open startup folder.cmd` opens the startup folder in Explorer.
