@@ -24,8 +24,7 @@ echo IconCache database files have been successfully deleted.
 echo.
 echo You will need to restart the PC to finish rebuilding your icon cache.
 choice /m "Do you want to restart the PC now?"
-rem Yes
-if not errorlevel 2 (
+if %errorlevel% == 1 (
 	shutdown /r /f /t 0
 )
 exit /b
