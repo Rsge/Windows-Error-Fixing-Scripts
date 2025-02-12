@@ -9,7 +9,7 @@ net file 1>nul 2>nul
 if %errorlevel% == 0 (goto gotPrivileges) else (goto getPrivileges)
 
 :getPrivileges
-if %1 == ELEV (echo ELEV & shift /1 & goto gotPrivileges)
+if '%1' == 'ELEV' (echo ELEV & shift /1 & goto gotPrivileges)
 rem If you have non-ASCII chars in your path you'll need to set the codepage appropriate to your locale:
 rem chcp 1252
 rem (ANSI-Latin1 - Western European, e.g. German)
@@ -24,7 +24,7 @@ echo UAC.ShellExecute "!batchPath!", args, "", "runas", 1 >> "%vbsGetPrivileges%
 exit /b
 
 :gotPrivileges
-if %1 == ELEV (del "%vbsGetPrivileges%" 1>nul 2>nul & shift /1)
+if '%1' == 'ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul & shift /1)
 
 
 rem Functional part
