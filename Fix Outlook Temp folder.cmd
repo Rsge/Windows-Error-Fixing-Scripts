@@ -1,5 +1,5 @@
 @echo off
-del /q /f %localappdata%\Temp\*
+del /q /s /f %localappdata%\Temp\*
 echo Outlook Temp folder cleared.
 pause
 exit /b
