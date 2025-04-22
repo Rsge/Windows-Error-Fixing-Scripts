@@ -21,9 +21,12 @@ These are made for running via double-clicking the scripts in file explorer.
 * `Fix winmail.dat - Disable RTF & TNEF.reg` fixes the receiver of an email getting a `winmail.dat` file as attachment instead of a normal file by introducing a registry fix to keep Outlook from ever sending emails in RTF format or TNEF encryption.
 * `Fix work file not createable.cmd` fixes the "Could not create the work file" error in Office.
 * `Open device manager.cmd` opens the device manager. (No shit! o.O)
+* `Open group policy overview.cmd` opens an overview for the currently applied group policies of the current user and PC.
 * `Open network adapters.cmd` opens the network adapters settings of the Control Panel.
 * `Open printer settings.cmd` opens the Devices and Printers settings of the Control Panel.
+* `Open reliability monitor.cmd` opens the reliability monitor, a better way to view the event log than the actual Event Log.
 * `Open startup folder.cmd` opens the startup folder in Explorer.
+* `Open system settings.cmd` opens the advanced system properties and settings.
 * `Remove Java remains.cmd` removes remains of a Java installation after uninstall.
 * `Remove Outlook profile.cmd` deletes all traces of a specified Outlook mail profile, so that a new profile of the same name can be created afterwards.
 * `Set Outlook delegate sent items folder.reg` sets Outlook to put items sent from a delegate into that delegate's sent items folder.
