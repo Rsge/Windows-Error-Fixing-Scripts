@@ -1,0 +1,4 @@
+# Batch: Prevent LF normalization
+*.cmd  -text
+*.bat  -text
+*.reg - text
